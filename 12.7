@@ -1,0 +1,13 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+bankName=['ТКБ','СКБ','ВТБ','СБЕР']
+deposit=[]
+
+money=int(input('Сумма вклада: '))
+
+deposit.append((money/100)*per_cent[bankName[0]])
+deposit.append((money/100)*per_cent[bankName[1]])
+deposit.append((money/100)*per_cent[bankName[2]])
+deposit.append((money/100)*per_cent[bankName[3]])
+
+maximum=max(deposit)
+print(bankName[deposit.index(maximum)]+':'+str(maximum))
